@@ -7,7 +7,7 @@ const menuData = require('./menuData.json')
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
   
-    await User.bulkCreate(userData, {
+    await Store.bulkCreate(storeData, {
       individualHooks: true,
       returning: true,
     });
